@@ -1,0 +1,309 @@
+<html>
+    <head>
+        <title>CALCULATING OVERALL TIRE DIAMETER</title>
+		<script type="text/javascript">
+		function show() {
+			  var x = document.getElementById('width').value;
+			  var y = document.getElementById('ratio').value * 0.01;
+			  var z = document.getElementById('wheel').value;
+			  var x2 = document.getElementById('width2').value;
+			  var y2 = document.getElementById('ratio2').value * 0.01;
+			  var z2 = document.getElementById('wheel2').value;
+			  var sum = (x * y)*2/25.4;
+			  var sum2 = (x2 * y2)*2/25.4;
+			  
+			  var cal = parseFloat(sum.toFixed(2)) + parseFloat(z);
+			  var cal2 = parseFloat(sum2.toFixed(2)) + parseFloat(z2);
+			  var sum3 = (cal - cal2)/cal *100;
+			  var cal3 = Math.abs(parseFloat(sum3.toFixed(2)));
+			  document.getElementById('result').value = cal;
+			  document.getElementById('result2').value = cal2;
+			  document.getElementById('result3').value = cal3;
+			  
+		} 
+		
+		
+		</script>
+		<style type="text/css">
+			body {text-align: center;}
+			#tyre {
+				float: left;
+				width: 450px;
+				
+				font-size:20px;
+				font-family: Tahoma,Helvetica,Arial,"SimSun",sans-serif;
+				margin: 0 25px 25px 0;
+				overflow: hidden;
+			}
+			.main {
+				padding: 10px;
+				width: 360px;
+				height: auto;
+				border: 4px solid #666666;
+				border-radius: 5px;
+				float:left;
+			}
+			.type1 {width: 300px;
+			}
+			.type2 {width: 300px;
+			}
+			p {
+			display: block;
+			-webkit-margin-before: 1em;
+			-webkit-margin-after: 1em;
+			-webkit-margin-start: 0px;
+			-webkit-margin-end: 0px;
+			}
+			fieldset {
+				display: block;
+				font-family: Tahoma,Helvetica,Arial,"SimSun",sans-serif;
+				font-size:18px;
+				-webkit-margin-start: 2px;
+				-webkit-margin-end: 2px;
+				-webkit-padding-before: 0.35em;
+				-webkit-padding-start: 0.75em;
+				-webkit-padding-end: 0.75em;
+				-webkit-padding-after: 0.625em;
+				border: 2px groove threedface;
+				border-image-source: initial;
+				border-image-slice: initial;
+				border-image-width: initial;
+				border-image-outset: initial;
+				border-image-repeat: initial;
+				min-width: -webkit-min-content;
+			}
+			select {
+				width: 65px!important;
+				margin: 5px 2px 9px;
+				font-size:18px;
+				color: #555;
+				-webkit-border-radius: 3px;
+				-moz-border-radius: 3px;
+				border-radius: 3px;
+				vertical-align: middle;
+				border-color: #3a87ad;
+				-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.075);
+				-moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.075);
+				box-shadow: inset 0 1px 3px rgba(0,0,0,0.075);
+			}
+			#result, #result2, #result3{
+				width: 65px!important;
+				margin: 5px 2px 9px;
+				color: #555;
+				font-size:18px;
+				-webkit-border-radius: 3px;
+				-moz-border-radius: 3px;
+				border-radius: 3px;
+				vertical-align: middle;
+				border-color: #3a87ad;
+				-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.075);
+				-moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.075);
+				box-shadow: inset 0 1px 3px rgba(0,0,0,0.075);
+			}
+			.Left{float:left;}
+			.Right{float:left;}
+			.Left2{float:left;}
+			.Right2{float:left;}
+				
+		</style>
+    </head>
+    <body>
+	
+			<div id="tyre">
+
+			  <div class="main">
+				  <p style="text-align:center"><strong>Tire diameter Calculator</strong></p>
+				   <fieldset>
+				   <legend>Select the Tyre size</legend>
+				   <div class="type1">
+
+				   <div class="Left">
+				   <p style="margin:5px 5 2px 0;padding:0;font-size:18px; margin:left;">Type 1 :</p></div>
+				   <div class="Right"><select name="width" id="width" onChange="show()">
+						<option value="105">105</option>
+						<option value="115">115</option>
+						<option value="125">125</option>
+						<option value="135">135</option>
+						<option value="145">145</option>
+						<option value="155">155</option>
+						<option value="165">165</option>
+						<option value="175">175</option>
+						<option value="185">185</option>
+						<option value="195">195</option>
+						<option value="205">205</option>
+						<option value="215">215</option>
+						<option value="225" selected="selected">225</option>
+						<option value="235">235</option>
+						<option value="245">245</option>
+						<option value="255">255</option>
+						<option value="265">265</option>
+						<option value="275">275</option>
+						<option value="285">285</option>
+						<option value="295">295</option>
+						<option value="305">305</option>
+						<option value="315">315</option>
+						<option value="325">325</option>
+						<option value="335">335</option>
+						<option value="345">345</option>
+						<option value="355">355</option>
+						<option value="365">365</option>
+						<option value="375">375</option>
+						<option value="385">385</option>
+						<option value="395">395</option>
+						<option value="405">405</option>
+					  </select>
+					  <span><strong>/</strong></span>
+					  <select name="ratio" id="ratio" onChange="show()">
+							<option value="20">20</option>
+							<option value="23">23</option>
+							<option value="25">25</option>
+							<option value="30">30</option>
+							<option value="35">35</option>
+							<option value="40">40</option>
+							<option value="45">45</option>
+							<option value="50" selected="selected">50</option>
+							<option value="55">55</option>
+							<option value="60">60</option>
+							<option value="65">65</option>
+							<option value="70">70</option>
+							<option value="75">75</option>
+							<option value="80">80</option>
+							<option value="85">85</option>
+							<option value="90">90</option>
+					  </select>
+					  <span><strong>R</strong></span></div>
+						<div class="type2">
+						<div class="Left2">
+						<p style="margin:5px 5 2px 0;padding:0;font-size:18px; margin:left;">Type 2 :</p></div>
+						<div class="Right2">
+						<select name="width2" id="width2" onChange="show()">
+						<option value="105">105</option>
+						<option value="115">115</option>
+						<option value="125">125</option>
+						<option value="135">135</option>
+						<option value="145">145</option>
+						<option value="155">155</option>
+						<option value="165">165</option>
+						<option value="175">175</option>
+						<option value="185">185</option>
+						<option value="195">195</option>
+						<option value="205">205</option>
+						<option value="215">215</option>
+						<option value="225" selected="selected">225</option>
+						<option value="235">235</option>
+						<option value="245">245</option>
+						<option value="255">255</option>
+						<option value="265">265</option>
+						<option value="275">275</option>
+						<option value="285">285</option>
+						<option value="295">295</option>
+						<option value="305">305</option>
+						<option value="315">315</option>
+						<option value="325">325</option>
+						<option value="335">335</option>
+						<option value="345">345</option>
+						<option value="355">355</option>
+						<option value="365">365</option>
+						<option value="375">375</option>
+						<option value="385">385</option>
+						<option value="395">395</option>
+						<option value="405">405</option>
+					  </select>
+					  <span><strong>/</strong></span>
+					  <select name="ratio2" id="ratio2" onChange="show()">
+							<option value="20">20</option>
+							<option value="23">23</option>
+							<option value="25">25</option>
+							<option value="30">30</option>
+							<option value="35">35</option>
+							<option value="40">40</option>
+							<option value="45">45</option>
+							<option value="50" selected="selected">50</option>
+							<option value="55">55</option>
+							<option value="60">60</option>
+							<option value="65">65</option>
+							<option value="70">70</option>
+							<option value="75">75</option>
+							<option value="80">80</option>
+							<option value="85">85</option>
+							<option value="90">90</option>
+					  </select>
+					  <span><strong>R</strong></span>
+					  <p style="margin:1px 1 2px 0;padding:0;font-size:15px;">eg.225/50R</p></div>
+					  </div>
+					  </fieldset>
+					  <fieldset>
+					  <legend>Select the Wheel Diameter size</legend>
+					  <div style ="width: 300px;">
+					  <div class="Left"><p style="margin:5px 5 2px 0;padding:0;font-size:18px; margin:left;">Type 1 :</p></div>
+					  <div class="Right">
+					  <select name="wheel" id="wheel" onChange="show()">
+						  <option value="10">10</option>
+						  <option value="12">12</option>
+						  <option value="13">13</option>
+						  <option value="14">14</option>
+						  <option value="15">15</option>
+						  <option value="16" selected="selected">16</option>
+						  <option value="17">17</option>
+						  <option value="18">18</option>
+						  <option value="19">19</option>
+						  <option value="20">20</option>
+						  <option value="21">21</option>
+						  <option value="22">22</option>
+						  <option value="23">23</option>
+						  <option value="24">24</option>
+						  <option value="25">25</option>
+						  <option value="26">26</option>
+						  <option value="28">28</option>
+						  <option value="30">30</option>
+						  <option value="32">32</option>
+						  </select></td></div>
+					  </div>
+					  <div style ="width: 200px;">
+					  <div class="Left"><p style="margin:5px 5 2px 0;padding:0;font-size:18px; margin:left;">Type 2 :</p></div>
+					  <div class="Right">
+					  <select name="wheel2" id="wheel2" onChange="show()">
+						  <option value="10">10</option>
+						  <option value="12">12</option>
+						  <option value="13">13</option>
+						  <option value="14">14</option>
+						  <option value="15">15</option>
+						  <option value="16" selected="selected">16</option>
+						  <option value="17">17</option>
+						  <option value="18">18</option>
+						  <option value="19">19</option>
+						  <option value="20">20</option>
+						  <option value="21">21</option>
+						  <option value="22">22</option>
+						  <option value="23">23</option>
+						  <option value="24">24</option>
+						  <option value="25">25</option>
+						  <option value="26">26</option>
+						  <option value="28">28</option>
+						  <option value="30">30</option>
+						  <option value="32">32</option>
+						  </select></td>
+						</div>
+						</div>
+					  
+					  </fieldset>
+					  <fieldset>
+					  <legend>Overall Tyre Diameter</legend>
+					  <div style ="width: 300px;">
+						 <div class="Left"><p style="margin:5px 5 2px 0;padding:0;font-size:18px; margin:left;">Type 1 :</p></div>
+						 <div class="Right"><input id ="result" name="result" type="text" value="24.86" size= "5" disabled> inches</div>
+						 </div>
+						 <div style ="width: 250px;">
+						<div class="Left"><p style="margin:5px 5 2px 0;padding:0;font-size:18px; margin:left;">Type 2 :</p></div>
+						<div class="Right"><input id ="result2" name="result" type="text" value="24.86" size= "5" disabled> inches</div>
+						</div>
+						<div style ="width: 250px;">
+						<div class="Left"><p style="margin:5px 5 2px 0;padding:0;font-size:18px; margin:left;">Different :</p></div>
+						<div class="Right"><input id ="result3" name="result" type="text" value="0" size= "5" disabled> %</div>
+						</div>
+						
+					  </div>
+					  </fieldset>
+			</div> 
+    </body>
+</html>
